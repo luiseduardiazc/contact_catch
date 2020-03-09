@@ -25,7 +25,7 @@ SECRET_KEY = '=gfj)xd99z$zm2p6$)89x_x%zk%m2ebn3071^(r=y-b5p2x@)@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'catchposts.apps.CatchPostsConfig',
 ]
 
 MIDDLEWARE = [
