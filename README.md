@@ -4,7 +4,7 @@ Final project+
 
 ### Installation
 
-Install the dependencies and devDependencies and start the server.
+Install dependencies and run server.
 
 ```sh
 $ cd contact_catch
@@ -18,8 +18,8 @@ $ ./manage.py runserver 0.0.0.0:8000
 ##### url: /api/v1/scrap
 Method: POST
 Required fields
-url : string
-access_token : string
+* url : string
+* access_token : string
 curl example:
 ```sh
 $ curl -X POST -d '{"url": "some_url", "access_token": "some_token"}' -H 'Content-Type: application/json' 127.0.0.1:8000/api/v1/scrap
