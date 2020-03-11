@@ -6,7 +6,8 @@
 # Icon must end with two \r
 Icon
 
-
+# ide
+.vscode/
 # Thumbnails
 ._*
 
@@ -33,6 +34,7 @@ __pycache__/
 # Distribution / packaging
 .Python
 env/
+ven/
 build/
 develop-eggs/
 dist/
