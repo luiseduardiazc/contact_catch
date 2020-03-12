@@ -1,0 +1,44 @@
+.clip {
+	padding: 5%;
+	width: 100%;
+	background-color: #0000;
+	border-radius: 10px;
+}
+
+.clip .inner {
+	background-color: #1da249;
+	padding: 1em;
+	border-radius: 10px;
+	width:100%;
+	clip-path: circle(7% at 90% 20%);
+	transition: all .5s ease-in-out;
+	cursor: pointer;
+}
+.clip .inner:hover {
+	clip-path: circle(75%);
+	background-color: aqua;
+}
+.clip .inner:hover span {
+	color: #0000;
+}
+
+h1 {
+	color: #ffffff;
+	margin: 0;
+}
+p {
+	color: #ffffff;
+	font-size: 1rem;
+}
+
+span {
+	font-size: 1.5rem;
+	float: right;
+	color: white;
+	font-weight: bold;
+	transition: color .5s;
+	position: relative;
+	margin-right: 4%;
+	margin-top: -1%; 
+
+}
