@@ -1,0 +1,9 @@
+.navbar {
+   display: flex;
+}
+.navbar-nav .nav-link {
+   color: aqua !important;
+}
+#logo {
+   width: 40%;
+}

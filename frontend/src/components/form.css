@@ -1,0 +1,7 @@
+.form {
+    padding-top: 20vh;
+    height: 100vh;
+    background-image: url("../img/bg2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
