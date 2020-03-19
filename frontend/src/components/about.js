@@ -36,12 +36,12 @@ function About() {
     }
   ]
   return (
-    <Container className="about" fluid>
+    <Container className="about" fluid id="about">
       <Row>
         {
           team.map(user => {
             return (
-              <Col md={4} className="container" id="about">
+              <Col md={4} className="container">
                 <Card className="card">
                   <Card.Body className="content">
                     <Card.Title className="title">{user.name}</Card.Title>
