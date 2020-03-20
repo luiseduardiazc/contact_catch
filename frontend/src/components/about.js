@@ -39,9 +39,9 @@ function About() {
     <Container className="about" fluid id="about">
       <Row>
         {
-          team.map(user => {
+          team.map((user, index) => {
             return (
-              <Col md={4} className="container">
+              <Col key={index} md={4} className="container">
                 <Card className="card">
                   <Card.Body className="content">
                     <Card.Title className="title">{user.name}</Card.Title>

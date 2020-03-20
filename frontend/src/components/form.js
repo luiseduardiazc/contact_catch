@@ -1,22 +1,25 @@
 import React from "react";
-//import Loader from './loader';
-//import Results from './results'
+import Results from './results'
 import { Form, Container, Button ,Row, Col } from "react-bootstrap";
 import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
 import axios from 'axios';
 import "./form.css";
 
 function Forms() {
+  let resp = {};
   const responseFacebook = response => {
+    console.log('entro')
     let apiData = {
       url: document.getElementById('urltext').value,
       access_token: response.accessToken
     }
     axios.post('https://web-02.darwinsoto.tech/catch', apiData)
       .then(res => {
-        console.log(res);
+        resp = res;
       })
   };
+
+
   return (
     <Container className="form" fluid id="home">
       <Row>
@@ -27,7 +30,7 @@ function Forms() {
               <Form.Label>
                 <h2><i className="fas fa-angle-double-down"></i>Place your URL</h2>
               </Form.Label>
-              <Form.Control id="urltext" type="url" placeholder="https://www.facebook.com" />
+              <Form.Control  id="urltext" type="url" placeholder="https://www.facebook.com" />
             </Form.Group>
 
             <FacebookLogin
@@ -43,8 +46,9 @@ function Forms() {
         </Col>
         <Col md={4}></Col>
       </Row>
-
-      <Row></Row>
+      <Row>
+        <Results data={resp}/>
+      </Row>
     </Container>
   );
 }
