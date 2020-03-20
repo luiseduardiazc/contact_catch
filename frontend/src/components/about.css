@@ -1,6 +1,6 @@
 .about {
     padding-top: 6vh;
-    min-height: 100vh;
+    height: 100vh;
     background-image: url("../img/bg1.jpg");
     background-size: cover;
     background-attachment: fixed;

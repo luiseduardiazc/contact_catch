@@ -7,7 +7,7 @@ function Header() {
   return (
     <section className="side">
       <input type="checkbox" id="check"/>
-      <label for="check">
+      <label htmlFor="check">
         <i className="fas fa-bars" id="open"></i>
         <i className="fas fa-times" id="close"></i>
       </label>
