@@ -1,18 +1,11 @@
-import React , { useState, useEffect } from 'react';
+import React  from 'react';
 import { Table, Container ,Row, Col } from 'react-bootstrap';
 import './results.css';
 
-function Results(props) {
-	const [phones, setPhones] = useState({});
-	const [emails, setEmail] = useState({});
-
-	useEffect(()=>{
-		setPhones(props);
-		setEmail(props);
-	},[props])
-
+function Results({phones, emails}) {
+	
   return (
-    	<Container className="results" fluid id="about">
+    	<Container className="results" fluid>
     		<Row>
     			<Col md={2}></Col>
     			<Col md={3}>
@@ -26,10 +19,10 @@ function Results(props) {
 							  </thead>
 							  <tbody>
 							  	{
-							  		props.data.data.emails.map((email, index)=>{
+							  		emails.map((email, index)=>{
 							  			return (
 							  				<tr key={index}>
-										      <td>{index}</td>
+										      <td>{index++ }</td>
 										      <td>{email}</td>
 										    </tr>
 							  			)
@@ -51,9 +44,9 @@ function Results(props) {
 							  </thead>
 							  <tbody>
 							  	{
-							  		props.data.data.phones.map((phone, index)=>{
+							  		phones.map((phone, index)=>{
 							  			return (
-							  				<tr key={index}>
+							  				<tr key={index++}>
 										      <td>{index}</td>
 										      <td>{phone}</td>
 										    </tr>
